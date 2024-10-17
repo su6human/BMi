@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="com.example.demo.HelloController">
+   <MenuBar>
+      <Menu text="File">
+         <MenuItem fx:id="clearMenuItem" onAction="#clearFields" text="Clear" />
+         <MenuItem onAction="#exitApplication" text="Exit" />
+      </Menu>
+      <Menu text="Help">
+         <MenuItem onAction="#showHelp" text="How to use" />
+      </Menu>
+   </MenuBar>
+
+   <AnchorPane prefHeight="341.0" prefWidth="438.0">
+      <Label layoutX="50.0" layoutY="20.0" text="Height" />
+      <TextField fx:id="TextFieldHeight" layoutX="50.0" layoutY="50.0" />
+
+      <Label layoutX="50.0" layoutY="100.0" text="Weight" />
+      <TextField fx:id="TextFieldWeight" layoutX="50.0" layoutY="130.0" />
+
+      <Button fx:id="ButtonCalculate" layoutX="50.0" layoutY="170.0" onAction="#Calculate" text="Calculate BMI" />
+      <Button fx:id="ButtonChange" layoutX="150.0" layoutY="170.0" onAction="#Change" text="Change" />
+
+      <Label fx:id="BMILabel" layoutX="50.0" layoutY="210.0" text="BMI: " />
+   </AnchorPane>
+</VBox>
